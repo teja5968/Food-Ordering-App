@@ -1,5 +1,5 @@
 import resList from "../utils/mockData";
-import RestaurantCard from "./ResturantCard";
+import RestaurantCard ,{withPromotedLabel}from "./ResturantCard";
 
 import { useState } from 'react';
 import React from "react";
@@ -17,6 +17,14 @@ const Body = () =>{
     const[filteredRestaurants,setFilteredRestaurants] = useState([])
 
     const[searchtext,setSearchtext] = useState("")
+
+
+    const ResturantCardPromoted = withPromotedLabel(RestaurantCard)
+
+
+
+
+    
 
     const [title,setTitle] = useState(" ")
 
@@ -42,6 +50,9 @@ const Body = () =>{
      
     }
 
+
+   
+
     const onlineStatus = useOnlineStatus();
 
     if(onlineStatus === false)
@@ -66,8 +77,6 @@ const Body = () =>{
     
    
 
-   
-
      return listOfRestaurants.length===0 ? (
         
         <Shimmer />
@@ -76,10 +85,10 @@ const Body = () =>{
 
       <div className = "body">
   
-        <div className='filter'>
+        <div className='flex'>
 
-            <div className="search">
-                <input type ="text" className="search-box" 
+            <div className=" search m-4 p-7">
+                <input type ="text" autofocus="autofocus" className=" border border-solid border-black" 
                 value={searchtext} onChange={(e)=>{
                     
                     setSearchtext(e.target.value);
@@ -88,7 +97,7 @@ const Body = () =>{
 
               
                 
-                <button onClick={()=>{
+                <button className="px-4 py-1 rounded-lg bg-green-400 m-4" onClick={()=>{
                 
                const filteredRestaurants= listOfRestaurants.filter(
                 (res)=>res.info.name.toLowerCase().includes(searchtext.toLowerCase()));
@@ -102,9 +111,9 @@ const Body = () =>{
          
             </div>
 
-           
+             <div className=" search m-4 p-4  flex items-center">
 
-            <button className= "filter-btn" 
+            <button className= "px-4 py-2 rounded-lg bg-gray-100" 
             
             onClick={()=>{
 
@@ -115,30 +124,42 @@ const Body = () =>{
                
                 
             }}
-              
 
-            
-            
-
-           
-            >
+  >
             Top Rated Resturants</button>
+
+            </div>
        
 
                         
           
         </div>
   
-        <div className='res-container'>
-  
-        
-       
+        <div className='flex flex-wrap'>
         
         {
         
         filteredRestaurants.map((restaurant)=> (
         
-        <Link key={restaurant.info.id} to = {"/restaurants/"+restaurant.info.id}><RestaurantCard  resData = {restaurant}/></Link>
+        <Link key={restaurant.info.id} to = {"/restaurants/"+restaurant.info.id}>
+
+
+<RestaurantCard  resData = {restaurant}   />
+
+
+
+          {/* {restaurant.data.promoted ? (
+            <ResturantCardPromoted resData={restaurant}/>
+          ):(
+              <RestaurantCard  resData = {restaurant}   />
+            )} */}
+    
+          </Link>
+
+          //if the restaurant  is promoted then add a promoted label to it
+
+          
+
         
   
   
