@@ -1,4 +1,4 @@
-
+<!-- 
 
 
 <!-- two types of exports/imports -->
@@ -22,4 +22,4 @@ import {Component} from "path" -->
 
 # Client side Routing - not fecthing nw page replacing components interchanging thats why react is called single page application
  # Server side Routing - make a n/w call 
-
+ -->
