@@ -1,19 +1,25 @@
-const About =() =>{
+import React from "react";
+import User from "./User";
+import UserClass from "./UserClass";
 
-
-    return(
-
-        <div>
-
-            <h1>about us </h1>
-
-            {/* //    const {itemCards} = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[3]?.card?.card?.itemCards;
-
-//    console.log(itemCards) */}
-
-           
-        </div>
-    )
+class About extends React.Component {
+  constructor(props) {
+    super(props);
+    // console.log("Parent Constructor");
+  }
+  componentDidMount() {
+    // console.log("Parent Component Did Mount");
+  }
+  render() {
+    // console.log("Parent Render");
+    return (
+      <div>
+        <h1>About Compoment</h1>
+        <UserClass name={"First "} location={"Hyderabad"} />
+        <div>Hello</div>
+      </div>
+    );
+  }
 }
 
 export default About;

@@ -1,13 +1,16 @@
 import resList from "../utils/mockData";
 import RestaurantCard ,{withPromotedLabel}from "./ResturantCard";
 
-import { useState } from 'react';
+import {  useState ,useContext, } from 'react';
 import React from "react";
 import { useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 
 import useOnlineStatus from "../utils/useOnlineStatus";
+
+
+import UserContext from "../utils/UserContext";
 
 
 const Body = () =>{
@@ -43,9 +46,9 @@ const Body = () =>{
        
         const json = await data.json()
 
-      setlistOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
-      setFilteredRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
-      console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
+      setlistOfRestaurants(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+      setFilteredRestaurants(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+      console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
 
      
     }
@@ -72,6 +75,9 @@ const Body = () =>{
 
 
     // }
+
+
+    // const { loggedInUser , setUserName } = useContext(UserContext)
     
      
     
@@ -88,7 +94,7 @@ const Body = () =>{
         <div className='flex'>
 
             <div className=" search m-4 p-7">
-                <input type ="text" autofocus="autofocus" className=" border border-solid border-black" 
+                <input type ="text"  className=" border border-solid border-black" 
                 value={searchtext} onChange={(e)=>{
                     
                     setSearchtext(e.target.value);
@@ -129,11 +135,17 @@ const Body = () =>{
             Top Rated Resturants</button>
 
             </div>
-       
+
+
+
+
+          
 
                         
           
         </div>
+
+   
   
         <div className='flex flex-wrap'>
         

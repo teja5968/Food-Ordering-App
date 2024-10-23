@@ -23,3 +23,15 @@ import {Component} from "path" -->
 # Client side Routing - not fecthing nw page replacing components interchanging thats why react is called single page application
  # Server side Routing - make a n/w call 
  -->
+
+
+
+# Redux ToolKit
+ -Install @reduxjs/toolkit and react-redux
+
+ Build our Store
+
+ connect our store to our app
+ slice(cartSlice)
+ dispatch(action)
+ -Selector
