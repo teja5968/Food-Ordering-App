@@ -23,6 +23,7 @@ const Header = () =>{
     //subscribing to the store using a Selector
 
     const cartItems  = useSelector((state)=>state.cart.items)
+    console.log(cartItems)
 
 
     // if no dependency array => useeffect is called on every render
@@ -55,7 +56,7 @@ const Header = () =>{
           <li className='px-4' > <Link to= "/about">About Us </Link></li>
           <li className='px-4' > <Link to= "/contact">Contact </Link> </li>
           <li className='px-4' > <Link to= "/grocery">Grocery</Link> </li>
-          <li className='px-3 font-bold text-xl'> Cart-( {cartItems.length})</li>
+          <li className='px-3 font-bold text-xl'> <Link to= "/cart"> Cart-( {cartItems.length})</Link> </li>
           <button onClick={()=>{
          btnNameReact=== 'login' ? setBtnNameReact("logout")
          :setBtnNameReact("login");
