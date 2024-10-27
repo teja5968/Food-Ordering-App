@@ -46,11 +46,11 @@ const Body = () => {
 
     const json = await data.json()
 
-    setlistOfRestaurants(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
-    setFilteredRestaurants(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
-    console.log(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants)
+    setlistOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setFilteredRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 
-
+    console.log("body data", json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    
   }
 
 
@@ -94,7 +94,7 @@ const Body = () => {
       <div className='flex'>
 
         <div className=" search m-4 p-7">
-          <input type="text" className=" border border-solid border-black"
+          <input type="text"  data-testid="searchInput" className=" border border-solid border-black"
             value={searchtext} onChange={(e) => {
 
               setSearchtext(e.target.value);
@@ -103,16 +103,16 @@ const Body = () => {
 
 
 
-          <button className="px-4 py-1 rounded-lg bg-green-400 m-4" onClick={() => {
+          <button  className="px-4 py-1 rounded-lg bg-green-400 m-4" onClick={() => {
 
             const filteredRestaurants = listOfRestaurants.filter(
               (res) => res.info.name.toLowerCase().includes(searchtext.toLowerCase()));
 
             setFilteredRestaurants(filteredRestaurants)
 
-            console.log(searchtext)
+           
 
-          }}>search</button>
+          }}>Search</button>
 
 
         </div>
@@ -124,7 +124,7 @@ const Body = () => {
             onClick={() => {
 
               const filteredList = listOfRestaurants.filter(
-                (res) => res.info.avgRating > 4.1);
+                (res) => res.info.avgRating > 4.5);
 
               setFilteredRestaurants(filteredList)
 

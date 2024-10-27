@@ -1,0 +1,92 @@
+{
+    "info": {
+        "id": "336805",
+        "name": "Udupi Ahaar",
+        "cloudinaryImageId": "k8atj5j2ads6erp2z7iw",
+        "locality": "Wyra Road",
+        "areaName": "Lenin Nagar",
+        "costForTwo": "₹200 for two",
+        "cuisines": [
+            "South Indian"
+        ],
+        "avgRating": 4.1,
+        "parentId": "218991",
+        "avgRatingString": "4.1",
+        "totalRatingsString": "8.8K+",
+        "sla": {
+            "deliveryTime": 31,
+            "lastMileTravel": 1,
+            "serviceability": "SERVICEABLE",
+            "slaString": "30-35 mins",
+            "lastMileTravelString": "1.0 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-10-27 21:45:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "Rxawards/_CATEGORY-South%20Indian.png",
+                    "description": "Delivery!"
+                },
+                {
+                    "imageId": "v1695133679/badges/Pure_Veg111.png",
+                    "description": "pureveg"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "Delivery!",
+                                "imageId": "Rxawards/_CATEGORY-South%20Indian.png"
+                            }
+                        },
+                        {
+                            "attributes": {
+                                "description": "pureveg",
+                                "imageId": "v1695133679/badges/Pure_Veg111.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "ITEMS",
+            "subHeader": "AT ₹39"
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-4fb4802f-4c47-412b-8fc5-5ce449eb15e6"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/khammam/udupi-ahaar-wyra-road-lenin-nagar-rest336805",
+        "type": "WEBLINK"
+    }
+}

@@ -3,6 +3,7 @@
   const RestaurantCard = (props) => {
   
     const {resData} = props;
+   
     const{cloudinaryImageId,name,cuisines,avgRating,costForTwo} = resData?.info; 
 
     return (
@@ -10,7 +11,7 @@
 
       <div className="flex justify-between">
   
-      <div className=' rounded-lg m-4 p-4 w-[250px] bg-gray-100 hover:bg-gray-200'
+      <div data-testid = "resCard "  className=' rounded-lg m-4 p-4 w-[250px] bg-gray-100 hover:bg-gray-200'
       >
   
         <img className='rounded-lg' src = {CDN_URL+cloudinaryImageId} />
